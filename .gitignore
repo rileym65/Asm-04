@@ -1,0 +1,6 @@
+asm04
+*.asm
+*.lst
+*.build
+*.prg
+*.o

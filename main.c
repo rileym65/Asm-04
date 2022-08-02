@@ -61,7 +61,7 @@ void initOpcodes() {
   addOpcode("JCN CZ,{W}",        "16 [S]");
   addOpcode("JCN NZC,{W}",       "1e [S]");
   addOpcode("JCN NCZ,{W}",       "1e [S]");
-  addOpcode("FIM {3},{B}",       "20<N + [L]");
+  addOpcode("FIM {3},{W}",       "20<N + [L]");
   addOpcode("SRC {3}",           "21<N");
   addOpcode("FIN {3}",           "30<N");
   addOpcode("JIN {3}",           "31<N");
@@ -196,7 +196,7 @@ word findLabel(char* name, char* err) {
           }
       return labelValues[i];
       }
-  if (pass == 1) return 0xffff;
+  if (pass == 1) return 0x0000;
   *err = 0xff;
   printf("****ERROR: Label not found: %s\n",name);
   errors++;
